@@ -1,0 +1,12 @@
+@import "tailwindcss";
+:root{--ember:#ff4b16;--gold:#ffc46b;--blood:#4b0707;--glass:rgba(255,255,255,.1)}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:#030101;color:#fff;font-family:var(--font-sans),Inter,system-ui,sans-serif;overflow-x:hidden} ::selection{background:#ff8a3d;color:#140300}
+@keyframes float{0%,100%{transform:translate3d(0,0,0) rotate(0)}50%{transform:translate3d(0,-22px,0) rotate(2deg)}}
+@keyframes smoke{0%{transform:translateY(20px) scale(.8);opacity:0}35%{opacity:.48}100%{transform:translateY(-180px) scale(1.6);opacity:0}}
+@keyframes shine{0%{transform:translateX(-130%) rotate(18deg)}100%{transform:translateX(180%) rotate(18deg)}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes beam{0%,100%{opacity:.25;transform:rotate(18deg) translateX(-10%)}50%{opacity:.7;transform:rotate(18deg) translateX(12%)}}
+.glass{background:linear-gradient(135deg,rgba(255,255,255,.18),rgba(255,255,255,.045));border:1px solid rgba(255,255,255,.22);box-shadow:0 24px 80px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.32);backdrop-filter:blur(22px) saturate(145%)}
+.shine{position:relative;overflow:hidden}.shine:after{content:"";position:absolute;inset:-35% auto -35% -40%;width:32%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.52),transparent);animation:shine 5.8s ease-in-out infinite;pointer-events:none}
+.text-glow{text-shadow:0 0 26px rgba(255,109,32,.45),0 0 80px rgba(255,196,107,.22)}
+.perspective{perspective:1200px}.marquee{animation:marquee 32s linear infinite}.marquee:hover{animation-play-state:paused}
